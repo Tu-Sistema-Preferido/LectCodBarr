@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de Códigos de Barras</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluir la biblioteca QuaggaJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+</head>
+<body>
+  <br><br><br><br>
+    <div class="container">
+        <h1>Lector de Códigos de Barras</h1>
+        <button id="toggle-camera">Minimizar Cámara</button>
+        <div id="camera-container">
+            <!-- Aquí se mostrará la vista de la cámara -->
+            <div id="interactive" class="viewport"></div>
+        </div>
+        <br><br><br>
+        <p id="result">Escanea un código de barras...</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

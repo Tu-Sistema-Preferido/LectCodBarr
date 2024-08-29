@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: radial-gradient(circle, #ea3434, #131316, #ea3434, #131310); clip-path: 50% 50%;
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+#camera-container {
+    width: 100%;
+    margin: 20px 0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+#interactive {
+    width: 99%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    max-height: 400px; /* Limitar la altura máxima para mantener el diseño */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #C3628E;
+    color: white;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover{
+    background-color: #CB1E62;
+    transform: scale(0.95);
+}
+
+/* Estado minimizado */
+.minimized #camera-container {
+    max-height: 0;
+}
+
+.minimized button#toggle-camera::after {
+    content: "";
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    #interactive {
+        max-width: auto;
+        max-height: 400px; /* Reducir la altura en pantallas pequeñas */
+    }
+}
